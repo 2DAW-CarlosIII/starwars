@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +12,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Importar el controladores:
+use App\Http\Controllers\FilmController;
+use App\Http\Controllers\CharactersController;
+use App\Http\Controllers\newCharacterController; 
+
+// Creacion de Ruta Show Personajes Por Film:
+Route::pattern('id', '\d+');  // Esto hace que todos los  'id' del Archivo, solo pueda ser uno o mas digitos!
+Route::get('/films/{id}/characters', [FilmController::class, 'show']);
+// ------------------------------------- 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -21,8 +30,18 @@ Route::get('/films', function () {
     return view('films');
 });
 
-Route::get('/characters', function () {
-    return view('characters');
+// Mostrar Todos los Caracteres:
+Route::get('/characters', [CharactersController::class, 'index']);
+//Route::get('/characters', function () {
+//    return view('characters');
+//});
+
+// Nuevo Caracter:
+Route::get('/characters/newCharacter', function() {
+        return view('newCharacter');
+});
+Route::post('/characters/newCharacter', function() {
+        return [newCharacterController::class, 'store']);
 });
 
 Route::get('/dashboard', function () {

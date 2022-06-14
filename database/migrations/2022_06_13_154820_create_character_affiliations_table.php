@@ -18,7 +18,7 @@ class CreateCharacterAffiliationsTable extends Migration
             $table->integer('id_affiliation');
             
             $table->primary(['id_character', 'id_affiliation']);
-            $table->foreign('id_character', 'character_affiliations_ibfk_1')->references('id')->on('characters');
+//            $table->foreign('id_character', 'character_affiliations_ibfk_1')->references('id')->on('characters');
             $table->foreign('id_affiliation', 'character_affiliations_ibfk_2')->references('id')->on('affiliations');
         });
     }
