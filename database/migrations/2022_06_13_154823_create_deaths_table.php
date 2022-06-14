@@ -19,8 +19,8 @@ class CreateDeathsTable extends Migration
             $table->integer('id_killer')->nullable();
             $table->integer('id_film')->nullable();
             
-            $table->foreign('id_character', 'deaths_ibfk_1')->references('id')->on('characters');
-            $table->foreign('id_killer', 'deaths_ibfk_2')->references('id')->on('characters');
+//            $table->foreign('id_character', 'deaths_ibfk_1')->references('id')->on('characters');
+//            $table->foreign('id_killer', 'deaths_ibfk_2')->references('id')->on('characters');
             $table->foreign('id_film', 'deaths_ibfk_3')->references('id')->on('films');
         });
     }

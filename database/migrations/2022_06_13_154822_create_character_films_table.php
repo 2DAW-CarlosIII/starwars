@@ -18,7 +18,7 @@ class CreateCharacterFilmsTable extends Migration
             $table->integer('id_film');
             
             $table->primary(['id_character', 'id_film']);
-            $table->foreign('id_character', 'character_films_ibfk_1')->references('id')->on('characters');
+//            $table->foreign('id_character', 'character_films_ibfk_1')->references('id')->on('characters');
             $table->foreign('id_film', 'character_films_ibfk_2')->references('id')->on('films');
         });
     }
