@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Models\Character;
 
 class CharacterSeeder extends Seeder
 {
@@ -15,7 +16,7 @@ class CharacterSeeder extends Seeder
     public function run()
     {
         DB::table('characters')->truncate();
-        foreach (self::$characters as $character) {
+        foreach (self::$character as $character) {
             DB::table('characters')->insert([
                 'id' => $character['id'],
                 'name' => $character['name'],
@@ -32,9 +33,11 @@ class CharacterSeeder extends Seeder
                 'url' => $character['url'],
             ]);
         }
+
     }
 
-    private static $characters = array(
+
+    private static $character = array(
         array('id' => '1','name' => 'Luke Skywalker','height' => '172','mass' => '77','hair_color' => 'blond','skin_color' => 'fair','eye_color' => 'blue','birth_year' => '19BBY','gender' => 'male','planet_id' => '1','created_date' => '2014-12-09 13:50:51','updated_date' => '2014-12-20 21:17:56','url' => 'https://swapi.co/api/people/1/'),
         array('id' => '2','name' => 'C-3PO','height' => '167','mass' => '75','hair_color' => 'n/a','skin_color' => 'gold','eye_color' => 'yellow','birth_year' => '112BBY','gender' => 'n/a','planet_id' => '1','created_date' => '2014-12-10 15:10:51','updated_date' => '2014-12-20 21:17:50','url' => 'https://swapi.co/api/people/2/'),
         array('id' => '3','name' => 'R2-D2','height' => '96','mass' => '32','hair_color' => 'n/a','skin_color' => 'white, blue','eye_color' => 'red','birth_year' => '33BBY','gender' => 'n/a','planet_id' => '8','created_date' => '2014-12-10 15:11:50','updated_date' => '2014-12-20 21:17:50','url' => 'https://swapi.co/api/people/3/'),
