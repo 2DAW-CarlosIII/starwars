@@ -4,7 +4,9 @@
 @section('content')
 
     <div class="view view-starry-night">
-        <form class="form-section registration" novalidate="">
+        <form class="form-section registration" novalidate="" action="newCharacter" method="post" id="starwars-newCharacter-main-form"
+        accept-charset="UTF-8">
+            @csrf
             <header class="header registration">
                 <div data-testid="registration-logo" id="logo" class="logo logo-primary" role="img"
                     aria-label="Disney account"
