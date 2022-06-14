@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CharactersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,9 +22,14 @@ Route::get('/films', function () {
     return view('films');
 });
 
-Route::get('/characters', function () {
-    return view('characters');
-});
+Route::get('/films/{id}/characters', [CharactersController::class, 'getOneFilmCharacters']);
+
+Route::get('/characters', [CharactersController::class, 'verCharacters']);
+
+Route::get('/newCharacter', [CharactersController::class, 'getNewCharacter']);
+
+Route::post('/newCharacter', [CharactersController::class, 'postNewCharacter']);//->middleware(['auth'])->name('characters');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
