@@ -14,7 +14,7 @@ class CreateCharactersTable extends Migration
     public function up()
     {
         Schema::create('characters', function (Blueprint $table) {
-            $table->integer('id')->primary();
+            $table->integer('id')->autoIncrement();
             $table->text('name')->nullable();
             $table->integer('height')->nullable();
             $table->float('mass')->nullable();
@@ -28,7 +28,7 @@ class CreateCharactersTable extends Migration
             $table->timestamp('updated_at')->nullable();
             $table->text('url')->nullable();
 
-            $table->foreign('planet_id', 'characters_ibfk_1')->references('id')->on('planets');
+            //$table->foreign('planet_id', 'characters_ibfk_1')->references('id')->on('planets');
         });
     }
 
