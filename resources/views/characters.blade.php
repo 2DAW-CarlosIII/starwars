@@ -24,12 +24,14 @@
                                             <div class="bedazzlement"></div>
                                             <div class="content-bumper">
                                                 <div class="content-info">
+                                                    @foreach($listaPersonajes as $personaje)
                                                     <h3 class="title">
-                                                            <span class="long-title">Name</span>
+                                                            <span class="long-title">Name: {{$personaje['name']}}</span>
                                                     </h3>
                                                     <div class="desc-sizer">
-                                                            <p class="desc">Gender </p>
+                                                            <p class="desc">Gender {{$personaje['gender']}}</p>
                                                     </div>
+                                                    @endforeach
                                                 </div>
                                             </div>
                                         </div>
