@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             FilmSeeder::class,
             CharacterSeeder::class,
             CharacterFilmSeeder::class,
+            UsersTableSeeder::class,
         ]);
         Schema::enableForeignKeyConstraints();
     }

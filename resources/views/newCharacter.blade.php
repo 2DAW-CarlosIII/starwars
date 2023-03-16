@@ -4,7 +4,9 @@
 @section('content')
 
     <div class="view view-starry-night">
-        <form class="form-section registration" novalidate="">
+        <form action="{{url('/characters/create')}}" class="form-section registration" novalidate="" method="POST">
+            {{ method_field('POST') }}
+            @CSRF
             <header class="header registration">
                 <div data-testid="registration-logo" id="logo" class="logo logo-primary" role="img"
                     aria-label="Disney account"
@@ -22,6 +24,42 @@
                 <span class="field-name">Birth Year</span>
                 <div class="input-wrapper">
                     <input class="input-InputBirthYear" type="text" id="InputBirthYear" name="InputBirthYear" placeholder="Birth Year" value="">
+                </div>
+            </label>
+            <label data-testid="InputBirthYear-wrapper" class="input-text input-text-InputBirthYear" for="InputHeight">
+                <span class="field-name">Height</span>
+                <div class="input-wrapper">
+                    <input class="input-InputBirthYear" type="text" id="InputHeight" name="InputHeight" placeholder="Height" value="">
+                </div>
+            </label>
+            <label data-testid="InputBirthYear-wrapper" class="input-text input-text-InputBirthYear" for="InputMass">
+                <span class="field-name">Mass</span>
+                <div class="input-wrapper">
+                    <input class="input-InputBirthYear" type="text" id="InputMass" name="InputMass" placeholder="Mass" value="">
+                </div>
+            </label>
+            <label data-testid="InputBirthYear-wrapper" class="input-text input-text-InputBirthYear" for="InputHairColor">
+                <span class="field-name">Hair Color</span>
+                <div class="input-wrapper">
+                    <input class="input-InputBirthYear" type="text" id="InputHairColor" name="InputHairColor" placeholder="HairColor" value="">
+                </div>
+            </label>
+            <label data-testid="InputBirthYear-wrapper" class="input-text input-text-InputBirthYear" for="InputSkinColor">
+                <span class="field-name">Skin Color</span>
+                <div class="input-wrapper">
+                    <input class="input-InputBirthYear" type="text" id="InputSkinColor" name="InputSkinColor" placeholder="SkinColor" value="">
+                </div>
+            </label>
+            <label data-testid="InputBirthYear-wrapper" class="input-text input-text-InputBirthYear" for="InputEyeColor">
+                <span class="field-name">Eye Color</span>
+                <div class="input-wrapper">
+                    <input class="input-InputBirthYear" type="text" id="InputEyeColor" name="InputEyeColor" placeholder="EyeColor" value="">
+                </div>
+            </label>
+            <label data-testid="InputBirthYear-wrapper" class="input-text input-text-InputBirthYear" for="InputGender">
+                <span class="field-name">Gender</span>
+                <div class="input-wrapper">
+                    <input class="input-InputBirthYear" type="text" id="InputGender" name="InputGender" placeholder="Gender" value="">
                 </div>
             </label>
             <label data-testid="InputPlanetId-wrapper" class="input-text input-text-InputPlanetId" for="InputPlanetId">
