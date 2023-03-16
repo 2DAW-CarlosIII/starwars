@@ -4,7 +4,9 @@
 @section('content')
 
     <div class="view view-starry-night">
-        <form class="form-section registration" novalidate="">
+        <form action="{{ url('/personajes/create') }}" method="POST" class="form-section registration" novalidate="">
+            {{ method_field('POST') }}
+                @csrf
             <header class="header registration">
                 <div data-testid="registration-logo" id="logo" class="logo logo-primary" role="img"
                     aria-label="Disney account"
