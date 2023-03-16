@@ -22,6 +22,8 @@ Route::get('/films', function () {
     return view('films');
 });
 
+Route::get('films/{id}/characters', [CharactersController::class, 'getPersonajesPelicula']);
+
 Route::get('/characters', [CharactersController::class, 'getPersonajes']);
 
 Route::group(['middleware' => 'auth'], function() {

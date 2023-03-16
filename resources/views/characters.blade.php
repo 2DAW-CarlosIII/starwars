@@ -23,16 +23,16 @@
                                         <div class="content-wrapper   ">
                                             <div class="bedazzlement"></div>
                                             <div class="content-bumper">
-                                                @foreach($listaPersonajes as $personaje)
                                                 <div class="content-info">
+                                                    @foreach($listaPersonajes as $personaje)
                                                     <h3 class="title">
                                                             <span class="long-title">Name: {{$personaje['name']}}</span>
                                                     </h3>
                                                     <div class="desc-sizer">
                                                             <p class="desc">Gender {{$personaje['gender']}}</p>
                                                     </div>
+                                                    @endforeach
                                                 </div>
-                                                @endforeach
                                             </div>
                                         </div>
                                     </div>

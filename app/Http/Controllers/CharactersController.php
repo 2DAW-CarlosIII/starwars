@@ -27,8 +27,23 @@ class CharactersController extends Controller
             'name' => $datosNuevoPersonaje['name'],
             'birth_year' => $datosNuevoPersonaje['birth_year'],
             'planet_id' => $datosNuevoPersonaje['planet_id'],
-            'url' => $datosNuevoPersonaje['url'],
+            'url' => $datosNuevoPersonaje['url']
         ]);
 
+        return redirect()->action([CharactersController::class, 'getPersonajes']);
+
+    }
+
+    public function getPersonajesPelicula($id)
+    {
+        $personajesPelicula = DB::table('character_films')->where('id_film', '=', $id)->get();
+
+        $personajes = array();
+
+        foreach($personajesPelicula as $personaje){
+            $personajeEncontrado = Character::where('id', '=', $personaje['id_character'])->get();
+            array_push($personajes, $personajeEncontrado);
+        }
+        return view('characters', array('listaPersonajes' => $personajes));
     }
 }
