@@ -3,6 +3,7 @@
 @section('content')
 
 <!-- Inicio del código necesario para visualizar cada personaje -->
+@foreach($characters as $character)
 <section class="module display-view display" data-module="display" id="ref-1-2">
     <div class="bound layout-right">
         <div class="blocks-bound">
@@ -27,9 +28,42 @@
                                                     <h3 class="title">
                                                             <span class="long-title">Name</span>
                                                     </h3>
+                                                    <div>{{ $character->name }}</div>
                                                     <div class="desc-sizer">
                                                             <p class="desc">Gender </p>
+                                                            <div>{{ $character->gender }}</div>
                                                     </div>
+
+                                                    <div class="desc-sizer">
+                                                        <p class="desc">Height </p>
+                                                        <div>{{ $character->height }}</div>
+                                                    </div>
+
+                                                    <div class="desc-sizer">
+                                                        <p class="desc">Mass </p>
+                                                        <div>{{ $character->mass }}</div>
+                                                    </div>
+
+                                                    <div class="desc-sizer">
+                                                        <p class="desc">Hair Color </p>
+                                                        <div>{{ $character->hair_color }}</div>
+                                                    </div>
+
+                                                    <div class="desc-sizer">
+                                                        <p class="desc">Skin color</p>
+                                                        <div>{{ $character->skin_color }}</div>
+                                                    </div>
+
+                                                    <div class="desc-sizer">
+                                                        <p class="desc">Eye color </p>
+                                                        <div>{{ $character->eye_color }}</div>
+                                                    </div>
+
+                                                    <div class="desc-sizer">
+                                                        <p class="desc">Birth year </p>
+                                                        <div>{{ $character->birth_year  }}</div>
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -43,5 +77,7 @@
         </div>
     </div>
 </section>
+@endforeach
+
 <!-- FIN del código necesario para visualizar cada personaje -->
 @stop
