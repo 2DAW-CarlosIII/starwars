@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CharactersController;
+use App\Http\Controllers\CharacterFilmsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +23,11 @@ Route::get('/films', function () {
     return view('films');
 });
 
-Route::get('/characters', function () {
-    return view('characters');
-});
+Route::get('/films/{id}/characters', [CharacterFilmsController::class, "getFilmCharacters"]);
+
+Route::get('/newCharacter', [CharactersController::class, "getNewCharacterForm"]);
+Route::put('/characterInsert', [CharactersController::class, "insertCharacter"]);
+Route::get('/characters', [CharactersController::class, "getAllCharacters"]);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

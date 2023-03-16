@@ -3,6 +3,7 @@
 @section('content')
 
 <!-- Inicio del código necesario para visualizar cada personaje -->
+@foreach( $arrayPersonajes as $personaje )
 <section class="module display-view display" data-module="display" id="ref-1-2">
     <div class="bound layout-right">
         <div class="blocks-bound">
@@ -25,10 +26,10 @@
                                             <div class="content-bumper">
                                                 <div class="content-info">
                                                     <h3 class="title">
-                                                            <span class="long-title">Name</span>
+                                                            <span class="long-title">{{ $personaje->name }}</span>
                                                     </h3>
                                                     <div class="desc-sizer">
-                                                            <p class="desc">Gender </p>
+                                                            <p class="desc">{{ $personaje->gender }}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -43,5 +44,6 @@
         </div>
     </div>
 </section>
+@endforeach
 <!-- FIN del código necesario para visualizar cada personaje -->
 @stop
