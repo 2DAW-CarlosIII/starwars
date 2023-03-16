@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PeliculasController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,16 +17,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/films', function () {
-    return view('films');
-});
-
-Route::get('/characters', function () {
-    return view('characters');
-});
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+Route::get('/films', function () {
+    return view('films');
+});
+
+// Route::get('/characters', function () {
+//     return view('characters');
+// });
+
+Route::get('/personajes',[PeliculasController::class,'getIndex']);
+
+Route::get('/personajes/create',[PeliculasController::class,'getCreate']);
+Route::post('/personajes/create',[PeliculasController::class,'postCreate']);
+
+Route::get('/personaje/{id}',[PeliculasController::class,'getPersonaje']);
+
+

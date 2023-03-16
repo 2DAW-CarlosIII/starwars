@@ -33,14 +33,14 @@
 
           <ul id="section-links" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement">
             <li itemprop="name">
-              <a itemprop="url" class="section-link films-content" href="/films"
+              <a itemprop="url" class="section-link films-content" href="/peliculas"
                 data-cto="section" data-section="films" tabindex="0" aria-hidden="false">
                 <p class="films-content-title"><span>Films</span><span class="vertical-bar"></span><span
                     class="horizontal-bar"></span></p>
               </a>
             </li>
             <li itemprop="name">
-              <a itemprop="url" class="section-link characters-content" href="/characters"
+              <a itemprop="url" class="section-link characters-content" href="/personajes"
                 data-cto="section" data-section="characters" tabindex="0" aria-hidden="false">
                 <p class="characters-content-title"><span>Characters</span><span class="vertical-bar"></span><span
                     class="horizontal-bar"></span></p>

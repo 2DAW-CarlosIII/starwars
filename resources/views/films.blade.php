@@ -2,6 +2,10 @@
 <link rel="stylesheet" href="./index_files/table_div.css" type="text/css">
 @section('content')
 
+
+
+
+
 <!-- Inicio del código necesario para visualizar cada película -->
 <section class="module display-view display" data-module="display" id="ref-1-2">
     <div class="bound layout-right">
@@ -35,7 +39,7 @@
                                             <div
                                                 class="metadata    mob-name mob-photo mob-date tab-name tab-photo tab-date desktop-name desktop-photo desktop-date   ">
                                                 <div class="anchored-text">
-                                                    <a href="/films/1/characters">
+                                                    <a href="{{url('/getPersonaje/1')}}">
                                                     <h4 class="category-info"> <span
                                                             class="content-icon films-icon"></span> <span
                                                             class="category-name">personajes</span> </h4>
@@ -87,7 +91,7 @@
                                             <div
                                                 class="metadata    mob-name mob-photo mob-date tab-name tab-photo tab-date desktop-name desktop-photo desktop-date   ">
                                                 <div class="anchored-text">
-                                                    <a href="/films/2/characters">
+                                                    <a href="{{url('/getPersonaje/2')}}">
                                                     <h4 class="category-info"> <span
                                                             class="content-icon films-icon"></span> <span
                                                             class="category-name">personajes</span> </h4>
@@ -139,7 +143,7 @@
                                             <div
                                                 class="metadata    mob-name mob-photo mob-date tab-name tab-photo tab-date desktop-name desktop-photo desktop-date   ">
                                                 <div class="anchored-text">
-                                                    <a href="/films/3/characters">
+                                                    <a href="{{url('/getPersonaje/3')}}">
                                                     <h4 class="category-info"> <span
                                                             class="content-icon films-icon"></span> <span
                                                             class="category-name">personajes</span> </h4>
@@ -191,7 +195,7 @@
                                             <div
                                                 class="metadata    mob-name mob-photo mob-date tab-name tab-photo tab-date desktop-name desktop-photo desktop-date   ">
                                                 <div class="anchored-text">
-                                                    <a href="/films/4/characters">
+                                                    <a href="{{url('/getPersonaje/4')}}">
                                                     <h4 class="category-info"> <span
                                                             class="content-icon films-icon"></span> <span
                                                             class="category-name">personajes</span> </h4>
@@ -243,7 +247,7 @@
                                             <div
                                                 class="metadata    mob-name mob-photo mob-date tab-name tab-photo tab-date desktop-name desktop-photo desktop-date   ">
                                                 <div class="anchored-text">
-                                                    <a href="/films/5/characters">
+                                                    <a href="/{{url('/getPersonaje/5')}}">
                                                     <h4 class="category-info"> <span
                                                             class="content-icon films-icon"></span> <span
                                                             class="category-name">personajes</span> </h4>
@@ -295,7 +299,7 @@
                                             <div
                                                 class="metadata    mob-name mob-photo mob-date tab-name tab-photo tab-date desktop-name desktop-photo desktop-date   ">
                                                 <div class="anchored-text">
-                                                    <a href="/films/6/characters">
+                                                    <a href="{{url('/getPersonaje/6')}}">
                                                     <h4 class="category-info"> <span
                                                             class="content-icon films-icon"></span> <span
                                                             class="category-name">personajes</span> </h4>
