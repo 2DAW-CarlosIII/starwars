@@ -4,7 +4,9 @@
 @section('content')
 
     <div class="view view-starry-night">
-        <form class="form-section registration" novalidate="">
+        <form class="form-section registration" novalidate="" action="/characterInsert" method="POST">
+            {{ method_field('PUT') }}
+            @csrf
             <header class="header registration">
                 <div data-testid="registration-logo" id="logo" class="logo logo-primary" role="img"
                     aria-label="Disney account"
@@ -16,6 +18,12 @@
                 <span class="field-name">Name</span>
                 <div class="input-wrapper">
                     <input class="input-InputName" type="text" id="InputName" name="InputName" placeholder="Name" value="">
+                </div>
+            </label>
+            <label data-testid="InputGender-wrapper" class="input-text input-text-InputGender displayed" for="InputGender">
+                <span class="field-name">Gender</span>
+                <div class="input-wrapper">
+                    <input class="input-InputName" type="text" id="InputGender" name="InputGender" placeholder="Gender" value="">
                 </div>
             </label>
             <label data-testid="InputBirthYear-wrapper" class="input-text input-text-InputBirthYear" for="InputBirthYear">
@@ -31,10 +39,10 @@
                 </div>
             </label>
             <div id="URLPanel" class="url-panel">
-                <label class="input-text input-text-url-new" for="url-new">
-                    <span data-testid="url-new-title" class="field-name">URL</span>
-                    <div data-testid="url-new-container" class="input-wrapper">
-                        <input class="input-url-new" type="url" id="url-new" name="url-new" placeholder="URL" value="">
+                <label class="input-text input-text-InputUrl" for="InputUrl">
+                    <span data-testid="InputUrl-title" class="field-name">URL</span>
+                    <div data-testid="InputUrl-container" class="input-wrapper">
+                        <input class="input-InputUrl" type="url" id="InputUrl" name="InputUrl" placeholder="URL" value="">
                     </div>
                 </label>
             </div>
